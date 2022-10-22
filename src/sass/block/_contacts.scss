@@ -1,0 +1,125 @@
+.contacts {
+   &__wrapper {
+      padding: 120px 35px 90px 50px;
+      display: grid;
+      grid-template-columns: 400px 585px;
+      justify-content: space-between;
+   }
+   &__photo {
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+   &__descr {
+      padding-top: 6px;
+      .divider {
+         margin: 0;
+      }
+   }
+   &__title {
+      position: relative;
+      padding-left: 12px;
+      @include before_circle;
+   }
+   &__text, &__social {
+      margin-top: 20px;
+      font-weight: 700;
+   }
+   &__link {
+      margin-right: 25px;
+      img {
+         max-width: 30px;
+         max-height: 30px;
+      }
+   }
+   &__form {
+      margin-top: 30px;
+      position: relative;
+      display: grid;
+      grid-template: 45px 190px 45px / repeat(2, 280px);
+      justify-content: space-between;
+      row-gap: 33px;
+   }
+   &__input {
+      position: relative;
+      input {
+         width: 100%;
+         height: 100%;
+         padding: 0 20px;
+         font-weight: 500;
+         font-size: 12px;
+         color: $sub-color;
+      }
+   }
+   &__input-name {
+      display: block;
+      position: absolute;
+      margin-bottom: 0;
+      background: #FFFFFF;
+      padding: 0 8px;
+      top: -8px;
+      left: 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: $sub-color;
+   }
+   .error {
+      border-color: red;
+   }
+   label.error {
+      margin: 3px 0 0 0;
+      border: none;
+      line-height: 15px;
+      font-size: 14px;
+   }
+   &__textarea {
+      position: relative;
+      grid-column: 1 / 3;
+      textarea {
+         width: 100%;
+         height: 100%;
+         resize: none;
+         padding: 20px;
+         font-weight: 500;
+         font-size: 12px;
+         line-height: 18px;
+         color: $sub-color;
+      }
+   }
+   &__triggers {
+      grid-column: 1 / 3;
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      column-gap: 35px;
+   }
+   &__privacy {
+      position: relative;
+      display: flex;
+      align-items: center;
+      input {
+         position: relative;
+         margin-right: 10px;
+         &.error {
+            &::before {
+               content: '';
+               display: block;
+               width: 20px;
+               height: 20px;
+               border: 1px solid red;
+               position: absolute;
+               top: -4px;
+               left: -4px;
+               border-radius: 15%;
+            }
+         }
+      }
+      #checkbox-error {
+         position: absolute;
+         top: 31px;
+         font-size: 14px;
+         line-height: 17px;
+      }
+   }
+}

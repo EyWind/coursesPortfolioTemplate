@@ -1,0 +1,10 @@
+.text {
+   font-weight: 500;
+   font-size: 12px;
+   line-height: 18px;
+   color: $sub-color;
+   &_fz14 {
+      font-size: 14px;
+      line-height: 21px;      
+   }
+}
